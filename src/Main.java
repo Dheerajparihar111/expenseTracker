@@ -8,7 +8,7 @@ class data {
         System.out.println(expenseName);
         System.out.println(expenseAmount);
 
-        return "";
+        return"";
     }
 }
 class home{
@@ -16,8 +16,8 @@ class home{
     public   void homePage(){
         System.out.println("1)Add new expense");
         System.out.println("2)Remove an Entries");
-        System.out.println("3)Check total balence");
-        return;
+
+
     }
 }
 
@@ -36,39 +36,40 @@ public class Main {
                 case 1:
                     System.out.println("Enter the Expense Name");
                     System.out.println("Enter the Amount");
-                    System.out.println("Enter b to Back to home");
+                    input.nextLine();
                     String expenseName = input.nextLine();
-                    input.next();
                     int expenseAmount = input.nextInt();
+                    System.out.println(expenseName);
+                    System.out.println(expenseAmount);
                     System.out.println("Expense added Successfully");
+                    System.out.println("Enter b to Back to home");
                     char backButton = input.next().charAt(0);
-                    switch (backButton){
+                    switch (backButton) {
                         case 'b':
                             break;
                     }
                     break;
                 case 2:
                     System.out.println("Enter the Name of Expense");
-                    Data.data();
+                    input.nextLine();
+                    String deleteExpense = input.nextLine();
                     System.out.println("Enter Your Choice");
                     System.out.println("1)Delete");
                     System.out.println("2)Remainde me Leter");
                     int delete = input.nextInt();
                     switch (delete) {
                         case 1:
-                            System.out.println("Entrie deleted successfully");
+                            System.out.println(deleteExpense + " " + "Entrie deleted successfully");
                             break;
                         case 2:
                             homeScreen.homePage();
                             break;
                     }
-                case 3:
-                    Data.data();
-                    break;
+
 
             }
         }
-
+        System.out.println("Thank You For Using Expense tracker ");
     }
 }
 
