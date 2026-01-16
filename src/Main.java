@@ -1,14 +1,13 @@
 import java.util.*;
 class data {
-    String expenseName;
-    int expenseAmount;
 
-    public String data() {
+
+    public String data(String  expenseName,String  expenseAmount) {
 
         System.out.println(expenseName);
         System.out.println(expenseAmount);
-
         return"";
+
     }
 }
 class home{
@@ -25,50 +24,51 @@ class home{
 
 public class Main {
     static void main(String[] args) {
-        Scanner input =new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         data Data = new data();
         home homeScreen = new home();
         System.out.println("**************wel-come to expense tracker****************");
         homeScreen.homePage();
         int choice = input.nextInt();
-        for (int i=0;i<2;i++) {
+        String expenseName;
+        int expenseAmount;
+        for (int i = 0; i < 2; i++) {
             switch (choice) {
                 case 1:
                     System.out.println("Enter the Expense Name");
                     System.out.println("Enter the Amount");
                     input.nextLine();
-                    String expenseName = input.nextLine();
-                    int expenseAmount = input.nextInt();
+                    expenseName = input.nextLine();
+                    expenseAmount = input.nextInt();
                     System.out.println(expenseName);
                     System.out.println(expenseAmount);
                     System.out.println("Expense added Successfully");
                     System.out.println("Enter b to Back to home");
                     char backButton = input.next().charAt(0);
-                    switch (backButton) {
-                        case 'b':
-                            break;
+                    if (backButton == 'b') {
+                        break;
                     }
-                    break;
+
                 case 2:
                     System.out.println("Enter the Name of Expense");
                     input.nextLine();
                     String deleteExpense = input.nextLine();
                     System.out.println("Enter Your Choice");
                     System.out.println("1)Delete");
-                    System.out.println("2)Remainde me Leter");
+                    System.out.println("2)Remainder me Later");
                     int delete = input.nextInt();
                     switch (delete) {
                         case 1:
-                            System.out.println(deleteExpense + " " + "Entrie deleted successfully");
+                            System.out.println(deleteExpense + " " + "Entry deleted successfully");
                             break;
                         case 2:
                             homeScreen.homePage();
                             break;
                     }
 
-
             }
         }
+        Data.data(expenseName="petrol", String.valueOf(expenseAmount = Integer.parseInt("500")));
         System.out.println("Thank You For Using Expense tracker ");
     }
 }
