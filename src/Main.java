@@ -68,8 +68,7 @@ public class Main {
                     System.exit(0);
             }
         }
-        //Data.data(expenseName="petrol", String.valueOf(expenseAmount = Integer.parseInt("500")));
-        //System.out.println("Thank You For Using Expense tracker ");
+
     }
 }
 
