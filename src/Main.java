@@ -1,21 +1,20 @@
 import java.util.*;
 class data {
+    String expenseName;
+    int expenseAmount;
 
-
-    public String data(String  expenseName,String  expenseAmount) {
-
-        System.out.println(expenseName);
-        System.out.println(expenseAmount);
-        return"";
+    data(String  expenseName,int  expenseAmount) {
+  this.expenseName = expenseName;
+  this.expenseAmount = expenseAmount;
 
     }
 }
 class home{
 
-    public   void homePage(){
+    void homePage(){
         System.out.println("1)Add new expense");
         System.out.println("2)Remove an Entries");
-
+        System.out.println("3)EXIT");
 
     }
 }
@@ -25,21 +24,21 @@ class home{
 public class Main {
     static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        data Data = new data();
         home homeScreen = new home();
         System.out.println("**************wel-come to expense tracker****************");
+        while (true){
         homeScreen.homePage();
+
         int choice = input.nextInt();
-        String expenseName;
-        int expenseAmount;
-        for (int i = 0; i < 2; i++) {
+        input.nextLine();
             switch (choice) {
                 case 1:
                     System.out.println("Enter the Expense Name");
+                    String expenseName = input.nextLine();
                     System.out.println("Enter the Amount");
-                    input.nextLine();
-                    expenseName = input.nextLine();
-                    expenseAmount = input.nextInt();
+                    int expenseAmount = input.nextInt();
+
+
                     System.out.println(expenseName);
                     System.out.println(expenseAmount);
                     System.out.println("Expense added Successfully");
@@ -51,7 +50,6 @@ public class Main {
 
                 case 2:
                     System.out.println("Enter the Name of Expense");
-                    input.nextLine();
                     String deleteExpense = input.nextLine();
                     System.out.println("Enter Your Choice");
                     System.out.println("1)Delete");
@@ -65,11 +63,13 @@ public class Main {
                             homeScreen.homePage();
                             break;
                     }
-
+                case 3:
+                    System.out.println("Thank you for using Expense Tracker");
+                    System.exit(0);
             }
         }
-        Data.data(expenseName="petrol", String.valueOf(expenseAmount = Integer.parseInt("500")));
-        System.out.println("Thank You For Using Expense tracker ");
+        //Data.data(expenseName="petrol", String.valueOf(expenseAmount = Integer.parseInt("500")));
+        //System.out.println("Thank You For Using Expense tracker ");
     }
 }
 
