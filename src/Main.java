@@ -42,12 +42,7 @@ public class Main {
                     System.out.println(expenseName);
                     System.out.println(expenseAmount);
                     System.out.println("Expense added Successfully");
-                    System.out.println("Enter b to Back to home");
-                    char backButton = input.next().charAt(0);
-                    if (backButton == 'b') {
-                        break;
-                    }
-
+                    continue;
                 case 2:
                     System.out.println("Enter the Name of Expense");
                     String deleteExpense = input.nextLine();
