@@ -55,18 +55,14 @@ public class Main {
                     System.out.println("1)Delete");
                     System.out.println("2)Remainder me Later");
                     int delete = input.nextInt();
-                    if (delete ==1){
-                        System.out.println(deleteExpense + " "+"Entry Deleted Successfully");
-
-                    }
-                    /*switch (delete) {
+                    switch (delete) {
                         case 1:
                             System.out.println(deleteExpense + " " + "Entry deleted successfully");
-                            break;
+                            continue;
                         case 2:
                             homeScreen.homePage();
-                            break;
-                    }*/
+                            continue;
+                    }
                 case 3:
                     System.out.println("Thank you for using Expense Tracker");
                     System.exit(0);
