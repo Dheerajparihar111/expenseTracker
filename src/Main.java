@@ -30,7 +30,6 @@ public class Main {
         System.out.println("**************wel-come to expense tracker****************");
         while (true){
         homeScreen.homePage();
-
         int choice = input.nextInt();
         input.nextLine();
             switch (choice) {
@@ -39,10 +38,9 @@ public class Main {
                     String expenseName = input.nextLine();
                     System.out.println("Enter the Amount");
                     int expenseAmount = input.nextInt();
-
-
                     System.out.println(expenseName);
                     System.out.println(expenseAmount);
+                    data.add(new data(expenseName,expenseAmount));
                     System.out.println("Expense added Successfully");
                     continue;
                 case 2:
