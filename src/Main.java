@@ -86,6 +86,9 @@ public class Main {
                 case 4:
                     System.out.println("Thank you for using Expense Tracker");
                     System.exit(0);
+
+                default:
+                    System.out.println("Invalid Choice! Try again");
             }
         }
 
