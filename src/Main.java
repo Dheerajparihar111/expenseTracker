@@ -66,7 +66,24 @@ public class Main {
                             break;
                         }
                     }
+                    if (!found){
+                        System.out.println("Expense Not Found");
+                    }
+                    break;
                 case 3:
+                    if (data.isEmpty()){
+                        System.out.println("No Expense Recorded Yet ");
+                    }else {
+                        System.out.println("------All Expenses-------");
+                        int total =0;
+                        for (data e : data){
+                            System.out.println(e.expenseName+":$"+e.expenseAmount);
+                            total += e.expenseAmount;
+                        }
+                        System.out.println("Total Expense:$"+total);
+                    }
+                    break;
+                case 4:
                     System.out.println("Thank you for using Expense Tracker");
                     System.exit(0);
             }
