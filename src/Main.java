@@ -14,7 +14,8 @@ class home{
     void homePage(){
         System.out.println("1)Add new expense");
         System.out.println("2)Remove an Entries");
-        System.out.println("3)EXIT");
+        System.out.println("3) View All Expense");
+        System.out.println("4)EXIT");
 
     }
 }
@@ -25,6 +26,7 @@ public class Main {
     static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         home homeScreen = new home();
+        ArrayList<data> data =new ArrayList<>();
         System.out.println("**************wel-come to expense tracker****************");
         while (true){
         homeScreen.homePage();
