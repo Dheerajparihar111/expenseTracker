@@ -72,6 +72,8 @@ Clone the repository:
 
 git clone https://github.com/Dheerajparihar111/expenseTracker.git
 
+<img width="670" height="960" alt="Expense Tracker adding expense output" src="https://github.com/user-attachments/assets/90766815-3e69-434b-8885-678feadc02d0" />
+<img width="1902" height="952" alt="Expense Tracker view all  expense output" src="https://github.com/user-attachments/assets/d3878153-1cef-4695-ac44-3ff96a2a28d7" />
 
 Open the project in any Java IDE (IntelliJ, Eclipse, VS Code).
 
