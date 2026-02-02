@@ -46,17 +46,7 @@ public class Main {
                 case 2:
                     System.out.println("Enter the Name of Expense");
                     String deleteExpense = input.nextLine();
-                   /* System.out.println("Enter Your Choice");
-                    System.out.println("1)Delete");
-                    System.out.println("2)Remainder me Later");
-                    int delete = input.nextInt();
-                    switch (delete) {
-                        case 1:
-                            System.out.println(deleteExpense + " " + "Entry deleted successfully");
-                            continue;
-                        case 2:
-                            homeScreen.homePage();
-                            continue;*/
+
                     boolean found = false;
                     for (int i = 0;i< data.size();i++){
                         if (data.get(i).expenseName.equalsIgnoreCase(deleteExpense)){
